@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="2019.12.11" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="0" columns="16">
+  <image source="../../../../screen5 text 2/assets/tiles.png" width="256" height="212"/>
+ </tileset>
+ <tileset firstgid="1" source="../../tiles.tsx"/>
+ <layer id="1" name="Capa de patrones 1" width="16" height="13">
+  <data encoding="csv">
+28,0,0,0,0,0,0,136,0,0,0,0,0,0,0,0,
+0,0,28,0,0,0,0,136,0,7,8,9,0,0,0,0,
+0,0,0,0,0,0,0,136,0,23,24,25,0,0,0,0,
+0,0,0,0,0,0,0,136,0,0,0,0,0,28,0,0,
+0,0,0,0,0,0,0,136,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,152,153,153,153,153,153,153,153,153,
+0,0,0,7,8,9,0,136,0,0,0,0,0,0,0,0,
+0,0,0,23,24,25,0,136,0,0,0,0,0,0,28,0,
+0,28,0,0,0,0,0,136,0,28,0,0,0,0,0,0,
+0,0,0,0,0,0,0,136,0,0,0,0,0,0,0,0,
+153,153,153,153,153,153,153,152,0,0,7,8,9,0,0,0,
+0,0,0,0,0,0,0,0,0,0,23,24,25,0,0,0,
+0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

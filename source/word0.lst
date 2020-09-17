@@ -1,0 +1,125 @@
+Sjasm Z80 Assembler v0.42c - www.xl2s.tk             [2020.09.17 - 07:04:26]
+
+source\word0.asm
+Errors: 0
+
+       1   00:0000                              output "word0.bin"
+       2   00:C000                      
+       3   00:C000  FE                      db   #fe               ; ID archivo binario, siempre hay que poner el mismo -1FEh
+       4   00:C001  00 C0                   dw   INICIO            ; dirección de inicio
+       5   00:C003  70 C2                   dw   FINAL - 1         ; dirección final
+       6   00:C005  00 C0                   dw   INICIO             ; dircción del programa de ejecución (para cuando pongas r en bload"nombre_programa", r)
+       7   00:C007                      
+       8   00:C007                          org #c000 ; o 57344, org se utiliza para decirle al z80 en que posición de memoria RAM empieza nuestro programa en ensamblador
+       9   00:C000                      
+      10   00:C000                      INICIO:
+      11   00:C000  C9                      ret ; el ret es necesario para que vuelva al basic
+      12   00:C001                      level0:
+      13   00:C001                          db 27,-1,-1,-1,-1,-1,-1,135,-1,-1,-1,-1,-1,-1,-1,-1
+      13   00:C001  1B FF FF FF FF FF FF 87 FF FF FF FF FF FF FF FF 
+      14   00:C011                          db -1,-1,27,-1,-1,-1,-1,135,-1,6,7,8,-1,-1,-1,-1
+      14   00:C011  FF FF 1B FF FF FF FF 87 FF 06 07 08 FF FF FF FF 
+      15   00:C021                          db -1,-1,-1,-1,-1,-1,-1,135,-1,22,23,24,-1,-1,-1,-1
+      15   00:C021  FF FF FF FF FF FF FF 87 FF 16 17 18 FF FF FF FF 
+      16   00:C031                          db -1,-1,-1,-1,-1,-1,-1,135,-1,-1,-1,-1,-1,27,-1,-1
+      16   00:C031  FF FF FF FF FF FF FF 87 FF FF FF FF FF 1B FF FF 
+      17   00:C041                          db -1,-1,-1,-1,-1,-1,-1,135,-1,-1,-1,-1,-1,-1,-1,-1
+      17   00:C041  FF FF FF FF FF FF FF 87 FF FF FF FF FF FF FF FF 
+      18   00:C051                          db -1,-1,-1,-1,-1,-1,-1,151,152,152,152,152,152,152,152,152
+      18   00:C051  FF FF FF FF FF FF FF 97 98 98 98 98 98 98 98 98 
+      19   00:C061                          db -1,-1,-1,6,7,8,-1,135,-1,-1,-1,-1,-1,-1,-1,-1
+      19   00:C061  FF FF FF 06 07 08 FF 87 FF FF FF FF FF FF FF FF 
+      20   00:C071                          db -1,-1,-1,22,23,24,-1,135,-1,-1,-1,-1,-1,-1,27,-1
+      20   00:C071  FF FF FF 16 17 18 FF 87 FF FF FF FF FF FF 1B FF 
+      21   00:C081                          db -1,27,-1,-1,-1,-1,-1,135,-1,27,-1,-1,-1,-1,-1,-1
+      21   00:C081  FF 1B FF FF FF FF FF 87 FF 1B FF FF FF FF FF FF 
+      22   00:C091                          db -1,-1,-1,-1,-1,-1,-1,135,-1,-1,-1,-1,-1,-1,-1,-1
+      22   00:C091  FF FF FF FF FF FF FF 87 FF FF FF FF FF FF FF FF 
+      23   00:C0A1                          db 152,152,152,152,152,152,152,151,-1,-1,6,7,8,-1,-1,-1
+      23   00:C0A1  98 98 98 98 98 98 98 97 FF FF 06 07 08 FF FF FF 
+      24   00:C0B1                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,22,23,24,-1,-1,-1
+      24   00:C0B1  FF FF FF FF FF FF FF FF FF FF 16 17 18 FF FF FF 
+      25   00:C0C1                          db -1,-1,-1,27,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+      25   00:C0C1  FF FF FF 1B FF FF FF FF FF FF FF FF FF FF FF FF 
+      26   00:C0D1                      level1:
+      27   00:C0D1                          db -1,-1,-1,-1,-1,-1,33,-1,-1,-1,-1,-1,-1,-1,-1,-1
+      27   00:C0D1  FF FF FF FF FF FF 21 FF FF FF FF FF FF FF FF FF 
+      28   00:C0E1                          db -1,33,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,33,-1,-1,-1
+      28   00:C0E1  FF 21 FF FF FF FF FF FF FF FF FF FF 21 FF FF FF 
+      29   00:C0F1                          db -1,-1,-1,-1,-1,-1,-1,2,-1,-1,-1,-1,-1,-1,-1,-1
+      29   00:C0F1  FF FF FF FF FF FF FF 02 FF FF FF FF FF FF FF FF 
+      30   00:C101                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,33,-1
+      30   00:C101  FF FF FF FF FF FF FF FF FF FF FF FF FF FF 21 FF 
+      31   00:C111                          db -1,-1,50,-1,-1,-1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1
+      31   00:C111  FF FF 32 FF FF FF 02 FF FF FF FF FF FF FF FF FF 
+      32   00:C121                          db -1,-1,-1,-1,-1,-1,-1,-1,50,-1,-1,-1,-1,-1,-1,-1
+      32   00:C121  FF FF FF FF FF FF FF FF 32 FF FF FF FF FF FF FF 
+      33   00:C131                          db -1,-1,-1,33,-1,-1,2,-1,-1,-1,-1,-1,2,-1,-1,-1
+      33   00:C131  FF FF FF 21 FF FF 02 FF FF FF FF FF 02 FF FF FF 
+      34   00:C141                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50
+      34   00:C141  FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 32 
+      35   00:C151                          db -1,-1,-1,-1,-1,-1,-1,-1,50,-1,-1,33,-1,-1,-1,-1
+      35   00:C151  FF FF FF FF FF FF FF FF 32 FF FF 21 FF FF FF FF 
+      36   00:C161                          db -1,50,-1,-1,-1,-1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1
+      36   00:C161  FF 32 FF FF FF FF 02 FF FF FF FF FF FF FF FF FF 
+      37   00:C171                          db -1,-1,-1,-1,-1,-1,-1,2,-1,-1,-1,-1,-1,-1,-1,-1
+      37   00:C171  FF FF FF FF FF FF FF 02 FF FF FF FF FF FF FF FF 
+      38   00:C181                          db -1,-1,-1,-1,33,-1,-1,-1,2,-1,2,-1,-1,50,-1,-1
+      38   00:C181  FF FF FF FF 21 FF FF FF 02 FF 02 FF FF 32 FF FF 
+      39   00:C191                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,33
+      39   00:C191  FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 21 
+      40   00:C1A1                      level2:
+      41   00:C1A1                          db 182,182,182,182,182,182,182,182,182,52,182,182,182,182,182,182
+      41   00:C1A1  B6 B6 B6 B6 B6 B6 B6 B6 B6 34 B6 B6 B6 B6 B6 B6 
+      42   00:C1B1                          db 182,182,182,182,182,182,182,182,182,52,182,182,182,182,182,182
+      42   00:C1B1  B6 B6 B6 B6 B6 B6 B6 B6 B6 34 B6 B6 B6 B6 B6 B6 
+      43   00:C1C1                          db 182,182,182,182,182,182,182,182,182,52,182,182,182,182,182,182
+      43   00:C1C1  B6 B6 B6 B6 B6 B6 B6 B6 B6 34 B6 B6 B6 B6 B6 B6 
+      44   00:C1D1                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,52,-1,-1,-1,-1,-1,-1
+      44   00:C1D1  FF FF FF FF FF FF FF FF FF 34 FF FF FF FF FF FF 
+      45   00:C1E1                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,52,-1,-1,-1,-1,-1,-1
+      45   00:C1E1  FF FF FF FF FF FF FF FF FF 34 FF FF FF FF FF FF 
+      46   00:C1F1                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,52,-1,-1,-1,-1,-1,-1
+      46   00:C1F1  FF FF FF FF FF FF FF FF FF 34 FF FF FF FF FF FF 
+      47   00:C201                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,52,-1,-1,-1,-1,-1,-1
+      47   00:C201  FF FF FF FF FF FF FF FF FF 34 FF FF FF FF FF FF 
+      48   00:C211                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,52,-1,-1,-1,-1,-1,-1
+      48   00:C211  FF FF FF FF FF FF FF FF FF 34 FF FF FF FF FF FF 
+      49   00:C221                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,52,-1,-1,-1,-1,-1,-1
+      49   00:C221  FF FF FF FF FF FF FF FF FF 34 FF FF FF FF FF FF 
+      50   00:C231                          db -1,-1,-1,-1,-1,-1,-1,-1,-1,52,-1,-1,-1,-1,-1,-1
+      50   00:C231  FF FF FF FF FF FF FF FF FF 34 FF FF FF FF FF FF 
+      51   00:C241                          db 81,81,81,81,81,81,81,81,81,52,81,81,81,81,81,81
+      51   00:C241  51 51 51 51 51 51 51 51 51 34 51 51 51 51 51 51 
+      52   00:C251                          db 81,81,81,81,81,81,81,148,148,148,148,81,81,81,81,81
+      52   00:C251  51 51 51 51 51 51 51 94 94 94 94 51 51 51 51 51 
+      53   00:C261                          db 148,148,148,148,148,148,148,148,148,148,148,148,148,148,148,148
+      53   00:C261  94 94 94 94 94 94 94 94 94 94 94 94 94 94 94 94 
+      54   00:C271                      
+      55   00:C271                      FINAL:
+
+    LABELS
+-------------------------------------------------
+00:0000C000   INICIO
+00:0000C001 X level0
+00:0000C0D1 X level1
+00:0000C1A1 X level2
+00:0000C271   FINAL
+
+
+ Output: source\word0.out
+-------------------------------------------------
+
+ Page: 00
+  Org: 0000C000  Size: *  Used: 00000000
+
+    No output
+
+ Output: word0.bin
+-------------------------------------------------
+
+ Page: 00
+  Org: 0000C000  Size: *  Used: 00000278
+
+   Address   Length Align   Label
+   0000C000     632         INICIO
