@@ -14,6 +14,8 @@
 1 'Pero para este ejemplo los cargaremos desde basic'
 90 PRESET(0,10):PRINT#1,"Cargando sprites"
 100 gosub 1000
+1 'Ponemos el color de fondo transparente para copiar los gráficos en la page 0'
+110 color 15,0,0
 1 'Cargamos los gráficos'
 130 PRESET(0,10):PRINT#1,"Cargando graficos              "
 140 gosub 10000

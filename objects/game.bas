@@ -1,7 +1,7 @@
 10 rem Program:  Bosque
 20 rem autor:    MSX Murcia
 30 OPEN"grp:"AS#1:print #1,"Espere..."
-40 cls:color 15,2,1
+40 cls:color 1,3,1
 50 defint a-z: DEFUSR1=&H41:DEFUSR2=&H44
 60 'ON STRIG GOSUB 1530
 70 'sprite on:ON SPRITE GOSUB 2000
@@ -21,7 +21,7 @@
     450 gosub 1900
 500 goto 400 
 1260 '' <<<< INPUT SYSTEM >>>>
-    1265 'nada'
+    1265 '_TURBO ON (x,y,xp,yp,ph,pw,pp,mc,ms)
     1270 ST=STICK(0) OR STICK(1) OR STICK(2)
     1280 'TG=STRIG(0) OR STRIG(1) OR STRIG(2)
     1300 xp=x:yp=y
@@ -109,19 +109,19 @@
                 8570 'ms=0
                 8580 tn= m(f,c,ms)
                 8590 'print #1," "tn;
-                8600 if tn >=0 and tn <=15 then copy (tn*16,0*16)-((tn*16)+16,(0*16)+16),1 to (c*16,f*16)
-                8610 if tn >15 and tn <=31 then copy ((tn-16)*16,1*16)-(((tn-16)*16)+16,(1*16)+16),1 to (c*16,f*16)
-                8620 if tn >31 and tn <=47 then copy ((tn-32)*16,2*16)-(((tn-32)*16)+16,(2*16)+16),1 to (c*16,f*16)
-                8630 if tn>47 and tn <=63 then copy ((tn-48)*16,3*16)-(((tn-48)*16)+16,(3*16)+16),1 to (c*16,f*16)
-                8640 if tn>63 and tn <=79 then copy ((tn-64)*16,4*16)-(((tn-64)*16)+16,(4*16)+16),1 to (c*16,f*16)
-                8650 if tn>79 and tn <=95 then copy ((tn-80)*16,5*16)-(((tn-80)*16)+16,(5*16)+16),1 to (c*16,f*16)
-                8660 if tn>95 and tn <=111 then copy ((tn-96)*16,6*16)-(((tn-96)*16)+16,(6*16)+16),1 to (c*16,f*16)
-                8670 if tn>111 and tn <=127 then copy ((tn-112)*16,7*16)-(((tn-112)*16)+16,(7*16)+16),1 to (c*16,f*16)
-                8680 if tn>127 and tn <=143 then copy ((tn-128)*16,8*16)-(((tn-128)*16)+16,(8*16)+16),1 to (c*16,f*16)
-                8690 if tn>143 and tn <=159 then copy ((tn-144)*16,9*16)-(((tn-144)*16)+16,(9*16)+16),1 to (c*16,f*16)
-                8700 if tn>159 and tn <=175 then copy ((tn-160)*16,10*16)-(((tn-160)*16)+16,(10*16)+16),1 to (c*16,f*16)
-                8710 if tn>175 and tn <=191 then copy ((tn-176)*16,11*16)-(((tn-176)*16)+16,(11*16)+16),1 to (c*16,f*16)
-                8720 if tn>191 and tn <=207 then copy ((tn-192)*16,12*16)-(((tn-192)*16)+16,(12*16)+16),1 to (c*16,f*16)
+                8600 if tn >=0 and tn <=15 then copy (tn*16,0*16)-((tn*16)+16,(0*16)+16),1 to (c*16,f*16),0,tpset
+                8610 if tn >15 and tn <=31 then copy ((tn-16)*16,1*16)-(((tn-16)*16)+16,(1*16)+16),1 to (c*16,f*16),0,tpset
+                8620 if tn >31 and tn <=47 then copy ((tn-32)*16,2*16)-(((tn-32)*16)+16,(2*16)+16),1 to (c*16,f*16),0,tpset
+                8630 if tn>47 and tn <=63 then copy ((tn-48)*16,3*16)-(((tn-48)*16)+16,(3*16)+16),1 to (c*16,f*16),0,tpset
+                8640 if tn>63 and tn <=79 then copy ((tn-64)*16,4*16)-(((tn-64)*16)+16,(4*16)+16),1 to (c*16,f*16),0,tpset
+                8650 if tn>79 and tn <=95 then copy ((tn-80)*16,5*16)-(((tn-80)*16)+16,(5*16)+16),1 to (c*16,f*16),0,tpset
+                8660 if tn>95 and tn <=111 then copy ((tn-96)*16,6*16)-(((tn-96)*16)+16,(6*16)+16),1 to (c*16,f*16),0,tpset
+                8670 if tn>111 and tn <=127 then copy ((tn-112)*16,7*16)-(((tn-112)*16)+16,(7*16)+16),1 to (c*16,f*16),0,tpset
+                8680 if tn>127 and tn <=143 then copy ((tn-128)*16,8*16)-(((tn-128)*16)+16,(8*16)+16),1 to (c*16,f*16),0,tpset
+                8690 if tn>143 and tn <=159 then copy ((tn-144)*16,9*16)-(((tn-144)*16)+16,(9*16)+16),1 to (c*16,f*16),0,tpset
+                8700 if tn>159 and tn <=175 then copy ((tn-160)*16,10*16)-(((tn-160)*16)+16,(10*16)+16),1 to (c*16,f*16),0,tpset
+                8710 if tn>175 and tn <=191 then copy ((tn-176)*16,11*16)-(((tn-176)*16)+16,(11*16)+16),1 to (c*16,f*16),0,tpset
+                8720 if tn>191 and tn <=207 then copy ((tn-192)*16,12*16)-(((tn-192)*16)+16,(12*16)+16),1 to (c*16,f*16),0,tpset
                
             8800 next c
         8810 next f
